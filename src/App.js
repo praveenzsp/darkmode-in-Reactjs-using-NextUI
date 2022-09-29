@@ -1,5 +1,14 @@
 import "./App.css";
-import {NextUIProvider,createTheme,Switch,Modal,Text,Button,useModal,Dropdown} from "@nextui-org/react";
+import {
+  NextUIProvider,
+  createTheme,
+  Switch,
+  Modal,
+  Text,
+  Button,
+  useModal,
+  Dropdown,
+} from "@nextui-org/react";
 
 import { useState } from "react";
 
@@ -18,6 +27,7 @@ function App() {
   return (
     <NextUIProvider theme={darkMode ? darkTheme : lightTheme}>
       <div className="App">
+        <Text>Dark Mode is {darkMode?'enabled':'disabled'}</Text>
         <Switch
           checked={darkMode}
           onChange={(e) => setDarkMode(e.target.checked ? true : false)}
